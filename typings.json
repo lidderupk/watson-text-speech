@@ -1,0 +1,11 @@
+{
+  "globalDependencies": {
+    "async": "registry:dt/async#2.0.1+20170118182309",
+    "express-useragent": "registry:dt/express-useragent#0.2.4+20160709050713"
+  },
+  "globalDevDependencies": {
+    "chai": "registry:dt/chai#3.4.0+20170217154556",
+    "chai-http": "registry:dt/chai-http#0.0.0+20170201082344",
+    "sinon": "registry:dt/sinon#1.16.1+20161208163514"
+  }
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 185 138" style="enable-background:new 0 0 185 138;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#323C3C;}
+	.st2{font-family:'HelveticaNeue-Medium';}
+	.st3{font-size:18px;}
+	.st4{fill:none;stroke:#323C3C;stroke-width:3;stroke-miterlimit:10;}
+</style>
+<rect y="93.5" class="st0" width="185" height="44.5"/>
+<text transform="matrix(1 0 0 1 49.8223 106.3516)" class="st1 st2 st3">UX design</text>
+<g>
+	<g>
+		<circle class="st4" cx="42" cy="73" r="14.6"/>
+		<circle class="st4" cx="92.5" cy="73" r="14.6"/>
+		<circle class="st4" cx="92.5" cy="16.6" r="14.6"/>
+		<circle class="st4" cx="143" cy="73" r="14.6"/>
+		<polyline class="st4" points="92.5,59.4 92.5,45.3 92.5,31.2 		"/>
+		<polyline class="st4" points="42,58.4 42,44.3 92.5,44.3 143,44.3 143,58.4 		"/>
+	</g>
+</g>
+</svg>

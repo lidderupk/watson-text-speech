@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Watson text to speech</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/skeleton/normalize.css">
+    <link rel="stylesheet" href="css/skeleton/skeleton.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Watson Text to Speech Service Demo</h1>
+        </div>
+
+        <form method="GET" action="/convert">
+            <label for="voice">Pick a voice</label>
+            <select class="u-full-width" id="voice" name="voice">
+                <option value="en-US_MichaelVoice">Michael (Watson)</option>
+                <option value="en-US_AllisonVoice">Allison (Allows SSML customization)</option>
+                <option value="en-US_LisaVoice">Lisa</option>
+            </select>
+            <label for="text">Enter text or SSML (only available with Allison)</label>
+            <textarea class="u-full-width" placeholder="Hello World ..." id="text" name="text"></textarea>
+            <input class="button-primary" type="submit" value="Download Audio">
+        </form>
+    </div>
+</body>
+
+</html>
