@@ -35,13 +35,16 @@ router.get('/', function(req, res) {
     var fileName = new Date().getTime() + '-delete.wav';
     var filePath = dir + '/' + fileName;
     // Pipe the synthesized text to a file.
-    text_to_speech.synthesize(params).on('error', function(error) {
-        console.log('Error:', error);
-    }).pipe(fs.createWriteStream(filePath));
-
-    res.status(200).setHeader('Content-disposition', 'attachment; filename=' + fileName);
-    // mediaServer.pipe(req, res, filePath);
+    text_to_speech.synthesize(params)
+        .on('error', function(error) {
+            console.log('Error:', error);
+        })
+        .on('end', function() {
+            console.log('finished streaming !');
+            res.status(200).setHeader('Content-disposition', 'attachment; filename=' + fileName);
     res.end();
+        })
+        .pipe(fs.createWriteStream(filePath));
 });
 
 module.exports = router;
