@@ -32,19 +32,24 @@ router.get('/', function(req, res) {
     });
 
     var dir = path.join(__dirname, '/../public/audio');
-    var fileName = new Date().getTime() + '-delete.wav';
+    var fileName = new Date().getTime() + '-watson.wav';
     var filePath = dir + '/' + fileName;
     // Pipe the synthesized text to a file.
-    text_to_speech.synthesize(params)
+    var stream = text_to_speech.synthesize(params)
         .on('error', function(error) {
             console.log('Error:', error);
         })
         .on('end', function() {
-            console.log('finished streaming !');
-            res.status(200).setHeader('Content-disposition', 'attachment; filename=' + fileName);
-    res.end();
+            console.log('ending streaming !');
         })
         .pipe(fs.createWriteStream(filePath));
+
+    stream.on('finish', function() { 
+            console.log('finished streaming !');
+            res.status(200).setHeader('Content-disposition', 'attachment; filename=' + fileName);
+            var readStream = fs.createReadStream(filePath);
+            readStream.pipe(res);
+        });
 });
 
 module.exports = router;
